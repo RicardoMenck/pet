@@ -20,6 +20,7 @@ public class Agenda {
             }
         }
         //Esse horário está disponível
+        horariosAgendados.add(novoAgendamento);
         System.out.println("O seu horário foi agendado para o seu amigo fiel!");
         return true;
     }
