@@ -7,26 +7,20 @@ public class Agenda {
     private List<Agendamento> horariosAgendados;
 
     public Agenda() {
-        this.horariosAgendados = new ArrayList<>();
+        horariosAgendados = new ArrayList<>();
     }
 
     //Método para verificar a disponibilidade de horário
     public boolean horarioDisponivel(Agendamento novoAgendamento) {
         for(Agendamento agenda : horariosAgendados){
-            if(agenda.equals(novoAgendamento)) {
-                // Esse horário já está agendado
+            if(agenda.getData().equals(novoAgendamento.getData()) && agenda.getHorario().equals(novoAgendamento.getHorario())) {
+                // Já existe um atendimento marcado para o dia e horário indicado
+                System.out.println("Horário indisponível!");
                 return false;
             }
         }
         //Esse horário está disponível
+        System.out.println("O seu horário foi agendado para o seu amigo fiel!");
         return true;
-    }
-
-    // Método da classe
-    public void agendamento(Agendamento novoHorario) {
-        if (horarioDisponivel(novoHorario)) {
-            horariosAgendados.add(novoHorario);
-            System.out.println("Agendamento realizado " + novoHorario);
-        } else System.out.println("Erro ao tentar realizar o agendamento.");
     }
 }

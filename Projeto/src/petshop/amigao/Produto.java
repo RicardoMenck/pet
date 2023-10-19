@@ -15,6 +15,10 @@ public class Produto {
         } else System.out.println("Estoque insuficiente.");
     }
 
+    public void reporEstoque(int quantidade){
+        quantidadeEstoque += quantidade;
+    }
+
     //Construtor
 
     public Produto(String nome, String categoria, double preco, int quantidadeEstoque) {

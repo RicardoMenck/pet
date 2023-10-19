@@ -9,6 +9,6 @@ public class Main {
         Banho b1 = new Banho();
         Agendamento c1 = new Agendamento(a1,b1,"16/10/2023","10:00");
         Agenda agenda = new Agenda();
-        agenda.agendamento(c1);
+        agenda.horarioDisponivel(c1);
     }
 }
